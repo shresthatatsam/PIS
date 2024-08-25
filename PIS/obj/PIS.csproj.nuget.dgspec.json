@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Desktop\\PIS\\PIS\\PIS.csproj": {}
+    "C:\\Users\\97798\\Desktop\\pis\\PIS\\PIS\\PIS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Desktop\\PIS\\PIS\\PIS.csproj": {
+    "C:\\Users\\97798\\Desktop\\pis\\PIS\\PIS\\PIS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\PIS\\PIS\\PIS.csproj",
+        "projectUniqueName": "C:\\Users\\97798\\Desktop\\pis\\PIS\\PIS\\PIS.csproj",
         "projectName": "PIS",
-        "projectPath": "C:\\Users\\Dell\\Desktop\\PIS\\PIS\\PIS.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Desktop\\PIS\\PIS\\obj\\",
+        "projectPath": "C:\\Users\\97798\\Desktop\\pis\\PIS\\PIS\\PIS.csproj",
+        "packagesPath": "C:\\Users\\97798\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\97798\\Desktop\\pis\\PIS\\PIS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\97798\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,24 +56,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.33, 6.0.33]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
