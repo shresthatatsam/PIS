@@ -4,3 +4,6 @@
 
 /PIS/.vs
 /PIS/obj
+.vs/PIS
+bin
+obj
