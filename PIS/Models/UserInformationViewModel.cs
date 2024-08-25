@@ -7,42 +7,43 @@ namespace PIS.Models
 
     public class UserInformation : IUserInformation
     {
-        //public UserInformationViewModel Model { get; set; }
-        //public readonly ApplicationDbContext _context;
-        //private readonly IHttpContextAccessor _httpContextAccessor;
-        //public UserInformation(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
-        //{
-        //    Model = new UserInformationViewModel();
-        //    _context = context;
-        //    _httpContextAccessor = httpContextAccessor;
-        //}
+        public UserInformationViewModel Model { get; set; }
+        public readonly ApplicationDbContext _context;
 
-        //public IActionResult Register()
-        //{
-        //    _context.UserInformations.Add(Model);
-        //    _context.SaveChanges();
-        //    return new OkResult();
-        //}
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserInformation(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
+        {
+            Model = new UserInformationViewModel();
+            _context = context;
+            _httpContextAccessor = httpContextAccessor;
+        }
 
-
-
+        public IActionResult Register()
+        {
+            _context.UserInformations.Add(Model);
+            _context.SaveChanges();
+            return new OkResult();
+        }
 
 
-        //public bool Login(string userName, string password)
-        //{
-        //    var user = _context.UserInformations
-        //        .FirstOrDefault(u => u.user_name == userName && u.password == password);
 
-        //    if (user != null)
-        //    {
-        //        var userId = user.user_id;
-        //        var user_Name = user.user_name;
-        //        _httpContextAccessor.HttpContext.Session.SetString("UserId", userId.ToString());
-        //        _httpContextAccessor.HttpContext.Session.SetString("UserName", user_Name.ToString());
-        //        return true;
-        //    }
-        //    return false;
-        //}
+
+
+        public bool Login(string userName, string password)
+        {
+            var user = _context.UserInformations
+                .FirstOrDefault(u => u.user_name == userName && u.password == password);
+
+            if (user != null)
+            {
+                var userId = user.user_id;
+                var user_Name = user.user_name;
+                _httpContextAccessor.HttpContext.Session.SetString("UserId", userId.ToString());
+                _httpContextAccessor.HttpContext.Session.SetString("UserName", user_Name.ToString());
+                return true;
+            }
+            return false;
+        }
 
     }
 

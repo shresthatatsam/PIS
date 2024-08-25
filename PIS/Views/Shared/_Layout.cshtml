@@ -33,12 +33,15 @@
 
 </head>
 <body>
-    @{
 
-      
-            @Html.Partial("_Sidebar")
-         
-    }
+      @{
+                
+                string[] pathsToCheck = { "/Home", "/GroupName", "/UserGroup", "/MessageInfo", "/Party", "/Dealer", "/Currency", "/BankDetails", "/ForexBuySellDeals" };
+                if (pathsToCheck.Any(path => Context.Request.Path.Value.Contains(path)))
+                {
+                     @Html.Partial("_Sidebar")
+                }
+            }
 
     <div class="row">
         <div class="col-md-2">
