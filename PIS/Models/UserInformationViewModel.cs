@@ -1,4 +1,4 @@
-﻿using bank;
+﻿using PIS;
 using Microsoft.AspNetCore.Mvc;
 using PIS.Models.Interface;
 
@@ -52,7 +52,7 @@ namespace PIS.Models
         public string user_name { get; set; }
         public string password { get; set; }
         public bool? is_active { get; set; }
-        public DateTime created_date { get; set; }
+        public DateTime? created_date { get; set; }
 
     }
 
