@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-    namespace bank
+    namespace PIS
     {
         public class ApplicationDbContext : DbContext
         {
@@ -32,25 +32,22 @@ using Microsoft.EntityFrameworkCore;
             {
 
 
-         //modelBuilder.Entity<BankDetailsViewModel>(entity =>
-         //   {
-         //       entity.ToTable("bankdetails");
-         //       entity.HasKey(e => e.bank_id);
-         //       entity.Property(e => e.bank_name).IsRequired(false);
-         //       entity.Property(e => e.account_number).IsRequired(false);
-
-         //       entity.HasOne(ug => ug.currency)
-         //             .WithMany(u => u.bankdetails)
-         //             .HasForeignKey(ug => ug.currency_id)
-         //             .OnDelete(DeleteBehavior.Restrict)
-         //             .IsRequired();
-
-         //   });
+            modelBuilder.Entity<UserInformationViewModel>(entity =>
+            {
+                entity.ToTable("userDetails");
+                entity.HasKey(e => e.user_id);
+                entity.Property(e => e.user_name).IsRequired(true);
+                entity.Property(e => e.password).IsRequired(true);
+                entity.Property(e => e.is_active).HasDefaultValue(true);
+                entity.Property(e => e.created_date).IsRequired(false);
 
 
-          
-           
-           
+            });
+
+
+
+
+
 
 
             base.OnModelCreating(modelBuilder);
